@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import random
+import os
 
 from glob import glob
 from os.path import basename, splitext
@@ -19,6 +20,9 @@ magick(
 
 black = glob('black/*')
 white = glob('white/*')
+
+if not os.path.isdir('output'):
+    os.mkdir('output')
 
 times = 0
 
